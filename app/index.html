@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Platinum Road — GTA VI Trophy Guide &amp; Tracker</title>
-<meta name="description" content="An offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: checklist, roadmap, missables, and a cited guide for every trophy.">
+<meta name="description" content="Offline guide and tracker for all 55 GTA VI trophies on PS5: checklist, roadmap, missables, notes, counters, and a cited guide per trophy.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
     <p class="big-count"><span id="earnedCount">0</span><span class="of"> / 55</span></p>
     <p class="progress-line">earned &middot; <span id="earnedGamerscore">0</span> / 1,000 Gamerscore</p>
     <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
-    <p class="progress-line small" id="gradeCounts">Platinum 0/1 &middot; Gold 0/2 &middot; Silver 0/6 &middot; Bronze 0/46</p>
+    <p class="progress-line small" id="gradeCounts">Platinum: 0 of 1 earned &middot; Gold: 0 of 2 earned &middot; Silver: 0 of 6 earned &middot; Bronze: 0 of 46 earned</p>
   </div>
 </header>
 
@@ -39,6 +39,12 @@
     <button type="button" class="chip" data-kind="activities">Activities</button>
     <button type="button" class="chip" data-kind="crime">Crime</button>
     <button type="button" class="chip" data-kind="exploration">Exploration</button>
+  </div>
+  <div class="kind-filters" role="group" aria-label="Filter by content tag">
+    <span class="tag-label">Tags:</span>
+    <button type="button" class="chip tag-chip" data-tag="strangers">Strangers</button>
+    <button type="button" class="chip tag-chip" data-tag="money">Money (incl. robberies)</button>
+    <button type="button" class="chip tag-chip" data-tag="combat">Combat</button>
   </div>
   <label class="grade-label">Grade
     <select id="grade">
@@ -67,13 +73,13 @@
 
   <section id="view-roadmap" class="view hidden">
     <h2>Roadmap to the Platinum</h2>
-    <p class="roadmap-intro">Built from the official trophy descriptions. Estimated difficulty <strong>4/10</strong>, about <strong>200 hours</strong>, <strong>one playthrough</strong>, no mission replay — but free roam after the story, so nothing is missable except possibly one meditation (see Missables). Keep cheats off your trophy save: cheats disable trophies and saving.</p>
+    <p class="roadmap-intro">Built from the official trophy descriptions. Estimated difficulty <strong>4/10</strong>, about <strong>200 hours</strong>, <strong>one playthrough</strong>, no mission replay. Free roam opens after the story. Only one trophy is potentially missable (see Missables), and four have no established method yet. Keep cheats off your trophy save: cheats disable trophies and saving.</p>
     <div id="roadmapStages"></div>
   </section>
 
   <section id="view-missables" class="view hidden">
     <h2>Missable trophies</h2>
-    <p class="roadmap-intro">Only one trophy in the whole set can possibly be missed. Everything else can be finished in free roam after the story.</p>
+    <p class="roadmap-intro">One trophy is potentially missable. Four more have no established method yet, so whether they can be missed is not established either. The other 50 have no known missable step. Timing is listed per trophy below: story milestones are earned during required story progression.</p>
     <div id="missablesList"></div>
     <div class="save-advice">
       <h3>Save advice</h3>
@@ -84,11 +90,11 @@
   <section id="view-save" class="view hidden">
     <h2>Save &amp; settings</h2>
     <div class="save-panel">
-      <p>Your progress is saved in this browser (localStorage) the moment you tick a trophy. Export it to a file to back it up or move it to another browser, and import that file back here.</p>
+      <p>Your progress is saved in this browser (localStorage) the moment you tick a trophy, type a note, or change a counter. Export it to a file to back it up or move it to another browser, and import that file back here. Export and import carry your earned ticks, your per-trophy notes, your counters, and the spoiler setting.</p>
       <p><button id="exportBtn2" type="button">Export progress (.json)</button>
       <label class="import-btn">Import progress <input id="importFile2" type="file" accept="application/json,.json"></label></p>
       <p><button id="resetBtn" type="button" class="danger">Reset all progress</button></p>
-      <p class="small">Export file format: a JSON list of earned trophy names, e.g. <code>["Vice Got a Price!", "Just Like Paradise"]</code>.</p>
+      <p class="small">Export file format: a JSON object with earned trophy names, notes, counters and the spoiler setting, e.g. <code>{"earned": ["Vice Got a Price!"], "notes": {}, "counts": {}, "spoilers": false}</code>. Files exported by the first version of this guide (a plain list of names) still import.</p>
     </div>
     <div class="save-panel">
       <h3>Spoiler setting</h3>
@@ -98,6 +104,7 @@
     <div class="save-panel">
       <h3>About this guide</h3>
       <p>Unofficial fan guide. Not affiliated with Rockstar Games or PlayStation. Trophy names, descriptions and grades are shown as PlayStation publishes them. Guides are written in this entry’s own words; methods played firsthand are credited to <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/">PowerPyx’s GTA 6 Trophy Guide &amp; Roadmap (Nov 18, 2026)</a>, with GTABase and the official list where noted. Anything not yet confirmed in the game is labelled “not yet checked in the game” — never presented as fact. No Rockstar logo or official artwork appears in this guide.</p>
+      <p>Counters show the trophy’s own target, with the larger 100%-completion target shown separately where it differs. Each counter names its source — counters are community-reported, not platform data. Strangers, Money and Combat are editorial content tags, not official PlayStation categories: Money here includes robberies, and the Strangers tag lists character questlines, only four of which count toward the 8-strand Strangers &amp; Freaks trophy. A note you write is personal, not guide evidence.</p>
       <p class="small">55 trophies: 1 Platinum, 2 Gold, 6 Silver, 46 Bronze. 28 hidden, 27 visible. 1,000 Gamerscore on Xbox. Licence: MIT.</p>
     </div>
   </section>

@@ -8,10 +8,11 @@ An offline guide and tracker for all **55 PlayStation 5 trophies** of Grand Thef
 
 ## What it is
 
-- **Complete checklist** of all 55 official trophies (1 Platinum, 2 Gold, 6 Silver, 46 Bronze; 28 hidden, 27 visible; 1,000 Gamerscore), with progress saved in the browser, export and import, and filters by kind (story, missable, collectibles, activities, crime, exploration) and grade.
+- **Complete checklist** of all 55 official trophies (1 Platinum, 2 Gold, 6 Silver, 46 Bronze; 28 hidden, 27 visible; 1,000 Gamerscore), with progress saved in the browser, export and import (which also carry your notes, counters and spoiler setting), and filters by kind (story, missable, collectibles, activities, crime, exploration), grade, and editorial content tags (Strangers, Money incl. robberies, Combat).
+- **Personal notes and verified progress counters**: a saved, editable note per trophy, and a counter per countable trophy showing the trophy's own target (42 gold medals for The Shootist, 250 stunts, and so on) with its source and confidence. Single-attempt requirements (Gunslinger, Retail Therapy, Hot Together) are shown as conditions, never as ticking numbers.
 - **A guide for every trophy**, written in this entry's own words, each with its sources named beside it.
 - **Roadmap to the Platinum**: five stages built from the official descriptions — about 200 hours, difficulty 4/10, one playthrough.
-- **Missables**: exactly one possibly-missable trophy (Positive Mental Attitude), flagged with its Chapter 1 warning; the other 54 are all doable in free roam after the story.
+- **Missables**: one potentially-missable trophy (Positive Mental Attitude), flagged with its Chapter 1 warning and no claim about whether skipping it blocks the trophy; four trophies with no established method, so their missability is not established either; the other 50 have no known missable step. Story milestones are earned during required story progression.
 - **Spoiler setting**: hides the 28 hidden trophies — name, description and guide — until they are earned.
 - **Honest labelling**: four trophies have no confirmed trigger yet (In The Beginning…, Bad Luck I Guess, The Truth Is Out There, Ten Pin) and are labelled “not yet checked in the game”, never presented as fact. Two more requirements are flagged unconfirmed the same way (Fair Game's exact animal; whether the Chapter 1 meditation is required).
 

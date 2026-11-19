@@ -6,6 +6,7 @@
   "trophies": [
     {
       "id": 1,
+      "miss": "none",
       "name": "Vice Got a Price!",
       "description": "Congratulations! You're a Leonida Legend.",
       "grade": "platinum",
@@ -16,10 +17,11 @@
       "roadmap_stage": 5,
       "verification": "official",
       "sources": ["Official trophy list (Exophase / PSNProfiles)"],
-      "guide": "The Platinum pops the moment the other 54 trophies are all earned, so there is no separate task to do for it. Work through the roadmap in order — story first, then character strands, activities, crime, and finally the 100% cleanup — and this one closes the set. Expect roughly 200 hours for the full run; there is no shortcut, and no trophy in the set is missable except possibly one meditation (see Positive Mental Attitude)."
+      "guide": "The Platinum pops the moment the other 54 trophies are all earned, so there is no separate task to do for it. Work through the roadmap in order — story first, then character strands, activities, crime, and finally the 100% cleanup — and this one closes the set. Expect roughly 200 hours for the full run; there is no shortcut. Only one trophy is potentially missable (Positive Mental Attitude — see Missables), and four have no established method yet."
     },
     {
       "id": 2,
+      "miss": "auto",
       "name": "Just Like Paradise",
       "description": "Complete Gone Fishing.",
       "grade": "bronze",
@@ -34,6 +36,7 @@
     },
     {
       "id": 3,
+      "miss": "auto",
       "name": "Paradise Lost",
       "description": "Complete Chapter 1.",
       "grade": "bronze",
@@ -48,6 +51,7 @@
     },
     {
       "id": 4,
+      "miss": "auto",
       "name": "T**s Ass Drug Money",
       "description": "Complete Chapter 2.",
       "grade": "bronze",
@@ -62,6 +66,7 @@
     },
     {
       "id": 5,
+      "miss": "auto",
       "name": "Vice City, Baby!",
       "description": "Complete Chapter 3.",
       "grade": "bronze",
@@ -76,6 +81,7 @@
     },
     {
       "id": 6,
+      "miss": "auto",
       "name": "Top Of The World, Ma",
       "description": "Complete Chapter 4.",
       "grade": "bronze",
@@ -90,6 +96,7 @@
     },
     {
       "id": 7,
+      "miss": "auto",
       "name": "You Gotta Know When to Get Off",
       "description": "Complete the final mission.",
       "grade": "gold",
@@ -104,6 +111,7 @@
     },
     {
       "id": 8,
+      "miss": "auto",
       "name": "Trust",
       "description": "Complete Breakfast Run.",
       "grade": "bronze",
@@ -118,6 +126,7 @@
     },
     {
       "id": 9,
+      "miss": "auto",
       "name": "Break the Bank",
       "description": "Complete The Cartel Heist.",
       "grade": "bronze",
@@ -132,6 +141,7 @@
     },
     {
       "id": 10,
+      "miss": "auto",
       "name": "Family Matters",
       "description": "Complete Child's Play.",
       "grade": "bronze",
@@ -146,6 +156,7 @@
     },
     {
       "id": 11,
+      "miss": "auto",
       "name": "DWNFALL",
       "description": "Complete Headliners.",
       "grade": "bronze",
@@ -160,6 +171,7 @@
     },
     {
       "id": 12,
+      "miss": "auto",
       "name": "Hi-Jacked",
       "description": "Complete VCIA Takedown.",
       "grade": "bronze",
@@ -174,6 +186,7 @@
     },
     {
       "id": 13,
+      "miss": "auto",
       "name": "Snow Storm",
       "description": "Complete Operation Savage Glory.",
       "grade": "bronze",
@@ -188,6 +201,8 @@
     },
     {
       "id": 14,
+      "miss": "none",
+      "counter": {"target": 100, "unit": "% completion", "step": 5, "extra": "35-task checklist. Animals studied: 0/100 (100% target; no definitive species total).", "src": "PowerPyx — 100% checklist"},
       "name": "A Long Road",
       "description": "Attain 100% Completion.",
       "grade": "gold",
@@ -198,11 +213,13 @@
       "roadmap_stage": 5,
       "verification": "community",
       "sources": ["Official trophy list (Exophase / PSNProfiles)", "PowerPyx — GTA 6 Trophy Guide & Roadmap (Nov 18, 2026)", "GTABase", "Rock Paper Shotgun"],
-      "guide": "Reach 100% on the in-game completion checklist (Progress, then Stats, then 100% Completion — it only becomes visible after the story, though progress made during the story already counts). The checklist has 35 tasks, but most ask for only part of a total, so 100% here is closer to 60% true completion: 200 of 277 base vehicles, 100 of 255 animals, 70 of 80 challenges, 300 of 397 stunts, 15 of 18 card sets. Only a few tasks demand everything — all 39 Gang Operations, all 42 Shooting Range golds, all 42 Drone Time Trials, all 15 of Bret's Target Decks, and all Underwater Discoveries. Nothing on the list is missable; all of it can be finished in free roam after the story. The animal total is disputed across outlets (255 per PowerPyx, over 160 elsewhere), but the requirement — study 100 — is agreed. This is the long tail of the Platinum: leave it for Stage 5 and tick off its tasks alongside the other trophies."
+      "guide": "Reach 100% on the in-game completion checklist (Progress, then Stats, then 100% Completion — it only becomes visible after the story, though progress made during the story already counts). The checklist has 35 tasks, but most ask for only part of a total, so 100% here is closer to 60% true completion: 200 of 277 base vehicles, 100 animals studied (no definitive species total — reports differ), 70 of 80 challenges, 300 of 397 stunts, 15 of 18 card sets. Only a few tasks demand everything — all 39 Gang Operations, all 42 Shooting Range golds, all 42 Drone Time Trials, all 15 of Bret's Target Decks, and all Underwater Discoveries. Nothing on the list is missable; all of it can be finished in free roam after the story. The animal total is disputed across outlets (255 per PowerPyx, over 160 elsewhere), but the requirement — study 100 — is agreed. This is the long tail of the Platinum: leave it for Stage 5 and tick off its tasks alongside the other trophies."
     }
 ,
     {
       "id": 15,
+      "miss": "none",
+      "counter": {"target": 250, "unit": "stunts", "step": 10, "extra": "397 total; 300 for 100%.", "src": "PowerPyx — 100% checklist"},
       "name": "Cunning Stunts",
       "description": "Complete 250 Stunts.",
       "grade": "silver",
@@ -217,6 +234,8 @@
     },
     {
       "id": 16,
+      "miss": "none",
+      "counter": {"target": 9, "unit": "activity types", "src": "PowerPyx — trophy guide"},
       "name": "Master of None",
       "description": "Try each type of activity once.",
       "grade": "bronze",
@@ -231,6 +250,8 @@
     },
     {
       "id": 17,
+      "miss": "none",
+      "counter": {"target": 42, "unit": "gold medals", "extra": "12 courses across 2 ranges; 42 for 100%.", "src": "PowerPyx — shooting range guide"},
       "name": "The Shootist",
       "description": "Earn a gold medal in all Shooting Range challenges.",
       "grade": "silver",
@@ -241,10 +262,12 @@
       "roadmap_stage": 3,
       "verification": "community",
       "sources": ["Official trophy list (Exophase / PSNProfiles)", "PowerPyx — GTA 6 Trophy Guide & Roadmap (Nov 18, 2026)", "GTABase"],
-      "guide": "Earn a gold medal in all 42 Shooting Range challenges. Every one of the 42 must be gold — silver or bronze does not count — and the 100% checklist also demands all 42 gold, so this trophy and the checklist line up exactly. Practice each challenge until the gold threshold is comfortable, and redo any challenge you only just passed; there is no penalty for retrying. Track progress in the Progress menu."
+      "guide": "Earn 42 gold medals at the Shooting Ranges — 12 courses across 2 ranges. Every medal must be gold — silver or bronze does not count — and the 100% checklist also demands all 42 gold, so this trophy and the checklist line up exactly. Practice each challenge until the gold threshold is comfortable, and redo any challenge you only just passed; there is no penalty for retrying. Track progress in the Progress menu."
     },
     {
       "id": 18,
+      "miss": "none",
+      "counter": {"target": 14, "unit": "locations", "src": "PowerPyx — trophy guide"},
       "name": "Top Fun",
       "description": "Win a Top Fun Drone Race at every location.",
       "grade": "bronze",
@@ -259,6 +282,8 @@
     },
     {
       "id": 19,
+      "miss": "none",
+      "counter": {"target": 20, "unit": "races won", "src": "PowerPyx — trophy guide"},
       "name": "Earn Cash, Not Kudos",
       "description": "Win 20 different races.",
       "grade": "bronze",
@@ -273,6 +298,8 @@
     },
     {
       "id": 20,
+      "miss": "none",
+      "tags": ["strangers"],
       "name": "Baited My Tackle",
       "description": "Beat Cal in a fishing challenge.",
       "grade": "bronze",
@@ -287,6 +314,7 @@
     },
     {
       "id": 21,
+      "miss": "none",
       "name": "Stick Fiddler",
       "description": "Complete an arcade game.",
       "grade": "bronze",
@@ -301,6 +329,8 @@
     },
     {
       "id": 22,
+      "miss": "none",
+      "tags": ["strangers"],
       "name": "Road to Rehabilitation",
       "description": "Complete the final mission for Andy.",
       "grade": "bronze",
@@ -315,6 +345,8 @@
     },
     {
       "id": 23,
+      "miss": "none",
+      "tags": ["strangers"],
       "name": "This Was No Boat Accident",
       "description": "Complete the final mission for Kenton.",
       "grade": "bronze",
@@ -329,6 +361,8 @@
     },
     {
       "id": 24,
+      "miss": "none",
+      "tags": ["strangers"],
       "name": "The Lone Rider",
       "description": "Complete the final mission for Billy.",
       "grade": "bronze",
@@ -343,6 +377,9 @@
     },
     {
       "id": 25,
+      "miss": "none",
+      "counter": {"target": 8, "unit": "strands", "extra": "4 strands confirmed (Kirk, Kyle, Yago, Pilot Pete); rest unconfirmed.", "src": "PowerPyx — trophy guide"},
+      "tags": ["strangers"],
       "name": "Strangers & Freaks",
       "description": "Complete 8 mission strands for strangers across the state of Leonida.",
       "grade": "silver",
@@ -353,10 +390,12 @@
       "roadmap_stage": 2,
       "verification": "community",
       "sources": ["Official trophy list (Exophase / PSNProfiles)", "PowerPyx — GTA 6 Trophy Guide & Roadmap (Nov 18, 2026)"],
-      "guide": "Complete 8 stranger mission strands across Leonida. Four counting strands are confirmed by PowerPyx: Kirk (the Skunk Ape), Kyle at McKittrick Farm, Yago (street racing), and Pilot Pete. Moses, Tyrone, Yasmani, Andy, Billy and Eddie do NOT count toward this total. The remaining four counting strands are not yet confirmed — PowerPyx says more strangers are yet to be discovered — so this guide lists only the four confirmed ones and labels the rest as not yet checked in the game. Do not assume a stranger counts until it is confirmed; keep exploring Leonida and check back as new strands are published."
+      "guide": "Complete 8 stranger mission strands across Leonida. Four counting strands are confirmed by PowerPyx: Kirk (the Skunk Ape), Kyle at McKittrick Farm, Yago (street racing), and Pilot Pete. Moses, Tyrone, Yasmani, Andy, Billy and Eddie do NOT count toward this total. The remaining four counting strands are not yet confirmed — PowerPyx says more strangers are yet to be discovered — so this guide lists only the four confirmed ones and labels the rest as not yet checked in the game. Do not assume a stranger counts until it is confirmed; keep exploring Leonida and check back as new strands are published. Yago's strand includes a timed invitation (Race Against Yago) — accept it when it appears as a precaution; no firsthand evidence either way on whether an expired invitation can be recovered."
     },
     {
       "id": 26,
+      "miss": "none",
+      "tags": ["strangers"],
       "name": "Supply & Demand",
       "description": "Complete the final mission for Randy.",
       "grade": "bronze",
@@ -371,6 +410,8 @@
     },
     {
       "id": 27,
+      "miss": "none",
+      "tags": ["strangers"],
       "name": "Spin On This!",
       "description": "Complete the final mission for Tyrone.",
       "grade": "bronze",
@@ -385,6 +426,8 @@
     },
     {
       "id": 28,
+      "miss": "potentially",
+      "counter": {"target": 18, "unit": "meditations", "extra": "10 locations including the balcony; 15/18 is the separate 100% target.", "src": "PowerPyx — meditation guide"},
       "name": "Positive Mental Attitude",
       "description": "Meditate at every spot across Leonida.",
       "grade": "bronze",
@@ -395,10 +438,12 @@
       "roadmap_stage": 2,
       "verification": "community",
       "sources": ["Official trophy list (Exophase / PSNProfiles)", "PowerPyx — GTA 6 Trophy Guide & Roadmap (Nov 18, 2026)", "GTABase"],
-      "guide": "Meditate at all 18 Meditation Spots across 10 locations. Meditating with both characters at a spot counts +2, so always bring your partner; track progress under Progress, then Collections, then Exploration, then Meditations (PowerPyx). The final meditation only becomes possible once both characters are playable together, after Chapter 2's Coffee Break. MISSABLE WARNING — the only possibly-missable trophy in the game: after the Chapter 1 mission Down to Earth, Lucia meditates on the balcony at Jason's house, and PowerPyx observed the counter rise +1 — but states twice that it is currently unclear whether that meditation is required for the trophy. The Chapter 1 spot is not marked as a Meditation Spot like the other 18. Do it in Chapter 1 anyway: it costs a minute, and skipping it risks the only missable in the set. Whether it is strictly required is not yet checked in the game."
+      "guide": "Meditate at all 18 Meditation Spots across 10 locations. Meditating with both characters at a spot counts +2, so always bring your partner; track progress under Progress, then Collections, then Exploration, then Meditations (PowerPyx). The final meditation only becomes possible once both characters are playable together, after Chapter 2's Coffee Break. MISSABLE WARNING — the only possibly-missable trophy in the game: after the Chapter 1 mission Down to Earth, Lucia meditates on the balcony at Jason's house, and PowerPyx observed the counter rise +1 — but states twice that it is currently unclear whether that meditation is required for the trophy. The Chapter 1 spot is not marked as a Meditation Spot like the other 18. Do it in Chapter 1 anyway to be safe: it costs a minute. No same-save evidence shows whether skipping it blocks the trophy, so no claim is made here either way."
     },
     {
       "id": 29,
+      "miss": "none",
+      "tags": ["strangers"],
       "name": "Fair Game",
       "description": "Hunt a unique animal for Bret.",
       "grade": "bronze",
@@ -413,6 +458,8 @@
     },
     {
       "id": 30,
+      "miss": "none",
+      "counter": {"target": 3, "unit": "card sets", "extra": "18 total; 15 for 100%.", "src": "PowerPyx — trophy guide"},
       "name": "Don't Touch My Deck",
       "description": "Complete 3 Collectible Card sets.",
       "grade": "silver",
@@ -428,6 +475,8 @@
 ,
     {
       "id": 31,
+      "miss": "none",
+      "counter": {"target": 100, "unit": "locations", "extra": "Guide lists 89 locations — not the complete pool.", "src": "PowerPyx — trophy guide"},
       "name": "You WAiNKer!",
       "description": "WAiNK It at 100 locations.",
       "grade": "silver",
@@ -442,6 +491,8 @@
     },
     {
       "id": 32,
+      "miss": "none",
+      "counter": {"target": 50, "unit": "challenges", "step": 5, "extra": "80 total; 70 for 100%.", "src": "PowerPyx — trophy guide"},
       "name": "One Last Thing",
       "description": "Complete 50 Challenges.",
       "grade": "bronze",
@@ -456,6 +507,9 @@
     },
     {
       "id": 33,
+      "miss": "none",
+      "condition": "Escape a 4-star Wanted Level with your partner in one attempt.",
+      "condition_src": "PowerPyx — trophy guide",
       "name": "Hot Together",
       "description": "Lose a 4 star Wanted Level with your partner and escape the heat.",
       "grade": "bronze",
@@ -470,6 +524,10 @@
     },
     {
       "id": 34,
+      "miss": "none",
+      "condition": "Rob 3 consecutive shops with your partner, retaining the Wanted Level throughout.",
+      "condition_src": "PowerPyx — trophy guide",
+      "tags": ["money"],
       "name": "Retail Therapy",
       "description": "Rob 3 shops back-to-back with your partner without losing your Wanted Level.",
       "grade": "bronze",
@@ -484,6 +542,8 @@
     },
     {
       "id": 35,
+      "miss": "none",
+      "counter": {"target": 100, "unit": "vehicles discovered", "extra": "200 of 277 base models for 100%.", "src": "PowerPyx — trophy guide"},
       "name": "Whip It Good",
       "description": "Discover 100 vehicles.",
       "grade": "bronze",
@@ -498,6 +558,10 @@
     },
     {
       "id": 36,
+      "miss": "none",
+      "condition": "Take down 5 enemies in one single use of Combat Focus.",
+      "condition_src": "PowerPyx — trophy guide",
+      "tags": ["combat"],
       "name": "Gunslinger",
       "description": "Take down 5 enemies in a single use of Combat Focus.",
       "grade": "bronze",
@@ -512,6 +576,7 @@
     },
     {
       "id": 37,
+      "miss": "none",
       "name": "Catch Me If You Can",
       "description": "Make an unscheduled departure at VCIA.",
       "grade": "bronze",
@@ -526,6 +591,8 @@
     },
     {
       "id": 38,
+      "miss": "none",
+      "tags": ["combat"],
       "name": "Challenging Tank",
       "description": "Kinda hot in these Rhinos.",
       "grade": "bronze",
@@ -540,6 +607,8 @@
     },
     {
       "id": 39,
+      "miss": "none",
+      "tags": ["money"],
       "name": "Sneakthief",
       "description": "Rob a jewelry store without being detected.",
       "grade": "bronze",
@@ -554,6 +623,9 @@
     },
     {
       "id": 40,
+      "miss": "none",
+      "counter": {"target": 5, "unit": "vaults robbed and escaped", "extra": "8 large bank jobs for 100%.", "src": "PowerPyx — trophy guide"},
+      "tags": ["money"],
       "name": "Maximum Withdrawal",
       "description": "Rob 5 Bank Vaults and escape.",
       "grade": "silver",
@@ -568,6 +640,8 @@
     },
     {
       "id": 41,
+      "miss": "none",
+      "tags": ["money"],
       "name": "A Classic Blitz Play",
       "description": "Rob an Armored Truck and escape.",
       "grade": "bronze",
@@ -582,6 +656,8 @@
     },
     {
       "id": 42,
+      "miss": "none",
+      "counter": {"target": 52, "unit": "map areas (PSN progress target)", "src": "PSNProfiles — native progress target"},
       "name": "The Goodtime State",
       "description": "Explore all of Leonida.",
       "grade": "bronze",
@@ -596,6 +672,9 @@
     },
     {
       "id": 43,
+      "miss": "none",
+      "counter": {"target": 9, "unit": "gangs", "extra": "39 operations for 100%.", "src": "PowerPyx — trophy guide"},
+      "tags": ["money"],
       "name": "Pest Control",
       "description": "Rob an Illegal Operation belonging to each gang.",
       "grade": "bronze",
@@ -610,6 +689,7 @@
     },
     {
       "id": 44,
+      "miss": "unknown",
       "name": "In The Beginning…",
       "description": "Enjoy a cocktail with a view on Ocean Beach.",
       "grade": "bronze",
@@ -619,11 +699,12 @@
       "missable": false,
       "roadmap_stage": 5,
       "verification": "unconfirmed",
-      "sources": ["Official trophy list (Exophase / PSNProfiles)", "PowerPyx — GTA 6 Trophy Guide & Roadmap (Nov 18, 2026)"],
-      "guide": "Not yet checked in the game. The description names the place (Ocean Beach) and the action (enjoy a cocktail with a view), but no source has confirmed the trigger — which bar, which prompt, or what counts as a view. PowerPyx lists this trophy's method as currently unknown. Do not trust any specific bar or step you read elsewhere until a firsthand report confirms it; this guide will update when one does. The safe play is to visit Ocean Beach bars in free roam and try the cocktail prompts you find there."
+      "sources": ["Official trophy list (Exophase / PSNProfiles)", "PowerPyx — GTA 6 Trophy Guide & Roadmap (Nov 18, 2026)", "TrueAchievements — Xbox player report (apple martini)"],
+      "guide": "A lead, reported on Xbox and now in the PowerPyx walkthrough — not yet checked on PS5. Xbox players report: go to the Oceanview Hotel rooftop bar on Ocean Beach, take the rooftop-access elevator, buy the $10 apple martini and drink it. A second Xbox player reported the same method working. That is Xbox evidence, not PS5 proof: the trigger has not been confirmed on PlayStation, so treat the bar, the elevator and the drink as a lead to try in free roam, not a verified step."
     },
     {
       "id": 45,
+      "miss": "none",
       "name": "Capital Offense",
       "description": "Smash your way out of a vehicle showroom in classic style.",
       "grade": "bronze",
@@ -638,6 +719,7 @@
     },
     {
       "id": 46,
+      "miss": "none",
       "name": "Let’s Go Bowling",
       "description": "Follow-through at the Kolt & Associates' bowling alley.",
       "grade": "bronze",
@@ -652,6 +734,7 @@
     },
     {
       "id": 47,
+      "miss": "none",
       "name": "Personal Best",
       "description": "A partnership with mass appeal.",
       "grade": "bronze",
@@ -667,6 +750,8 @@
 ,
     {
       "id": 48,
+      "miss": "none",
+      "counter": {"target": 500, "unit": "actions", "step": 10, "src": "PowerPyx — trophy guide (reported tracker)"},
       "name": "Actions Speak Louder",
       "description": "Choices made (for better or worse).",
       "grade": "bronze",
@@ -681,6 +766,7 @@
     },
     {
       "id": 49,
+      "miss": "unknown",
       "name": "Bad Luck, I Guess",
       "description": "Second time's the charm.",
       "grade": "bronze",
@@ -695,6 +781,7 @@
     },
     {
       "id": 50,
+      "miss": "unknown",
       "name": "The Truth Is Out There",
       "description": "What the hell just happened?",
       "grade": "bronze",
@@ -704,11 +791,13 @@
       "missable": false,
       "roadmap_stage": 5,
       "verification": "unconfirmed",
-      "sources": ["Official trophy list (Exophase / PSNProfiles)", "PowerPyx — GTA 6 Trophy Guide & Roadmap (Nov 18, 2026)"],
-      "guide": "Not yet checked in the game. The description is a joke with no mechanic, and no source has confirmed how this trophy fires. PowerPyx lists it as currently unknown and notes only speculation — that it may be tied to a UFO questline — which is a guess, not a method. Do not treat the UFO link as fact. This guide will update when a firsthand report confirms the trigger."
+      "sources": ["Official trophy list (Exophase / PSNProfiles)", "PowerPyx — GTA 6 Trophy Guide & Roadmap (Nov 18, 2026)", "TrueAchievements — Xbox player report (roadside UFO)"],
+      "guide": "A lead, reported on Xbox and now in the PowerPyx walkthrough — not yet checked on PS5. Xbox players report a roadside UFO encounter as the trigger. That is Xbox evidence, not PS5 proof: no firsthand PlayStation report has confirmed the encounter, its location, or what sets it off, so treat the UFO link as a lead, not a verified method. This guide will update when a firsthand PS5 report confirms the trigger."
     },
     {
       "id": 51,
+      "miss": "unknown",
+      "tags": ["combat"],
       "name": "Ten Pin",
       "description": "Bowl 'em over with a melee drive-by.",
       "grade": "bronze",
@@ -723,6 +812,9 @@
     },
     {
       "id": 52,
+      "miss": "none",
+      "counter": {"target": 250000, "unit": "$ laundered", "step": 1000, "extra": "Cumulative, not one transaction.", "src": "PowerPyx — trophy guide"},
+      "tags": ["money"],
       "name": "Dime on the Dollar",
       "description": "Earn $250,000 laundering Marked Bills through your contacts.",
       "grade": "bronze",
@@ -737,6 +829,9 @@
     },
     {
       "id": 53,
+      "miss": "none",
+      "counter": {"target": 100000, "unit": "$ spent", "step": 1000, "extra": "Cumulative across shops.", "src": "PowerPyx — trophy guide"},
+      "tags": ["money"],
       "name": "Treat Yo Self",
       "description": "Spend $100,000 across all shops.",
       "grade": "bronze",
@@ -751,6 +846,9 @@
     },
     {
       "id": 54,
+      "miss": "none",
+      "counter": {"target": 8, "unit": "garages", "extra": "$160,000 total; excludes story garages.", "src": "PowerPyx — trophy guide"},
+      "tags": ["money"],
       "name": "Little Boxes",
       "description": "Purchase all garage properties.",
       "grade": "bronze",
@@ -765,6 +863,8 @@
     },
     {
       "id": 55,
+      "miss": "none",
+      "counter": {"target": 10, "unit": "registrations", "extra": "Registered to Scooter Bros.", "src": "PowerPyx — trophy guide"},
       "name": "On the Spot",
       "description": "Register 10 vehicles to the Scooter Bros app.",
       "grade": "bronze",
