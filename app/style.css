@@ -102,21 +102,21 @@ main { padding: 8px 28px 28px; }
   border-radius: 14px; padding: 5px; max-height: calc(100vh - 24px); overflow: auto;
 }
 .guide-pane h2 { margin: 0 0 3px; font-size: 20px; line-height: 1.2; }
-.guide-pane .official-desc { color: var(--muted); font-style: italic; margin: 0 0 6px; }
-.guide-pane h3 { margin: 6px 0 3px; font-size: 15px; }
-.guide-pane p { margin: 0 0 6px; }
+.guide-pane .official-desc { color: var(--muted); font-style: italic; margin: 0 0 2px; }
+.guide-pane h3 { margin: 2px 0 2px; font-size: 15px; }
+.guide-pane p { margin: 0 0 2px; }
 .guide-text { font-size: 15px; }
-.sources { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 6px; }
+.sources { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 3px; }
 .sources a { color: var(--muted); }
 .verification-note { font-size: 13px; background: var(--accent-soft); border-radius: 6px; padding: 8px 10px; }
 .verification-note.unconfirmed { background: #fff4d6; }
 .empty-pane { color: var(--muted); }
 /* v2: progress counter and personal note in the guide pane. */
-.counter-box { border: 1px solid var(--line); border-radius: 10px; padding: 5px 12px; margin: 6px 0; background: #fdfcf9; }
+.counter-box { border: 1px solid var(--line); border-radius: 10px; padding: 3px 12px; margin: 3px 0; background: #fdfcf9; }
 .counter-box .counter-line { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; font-weight: 700; font-size: 16px; }
 .counter-box button { border: 1px solid var(--accent); background: #fff; color: var(--accent); border-radius: 6px; padding: 2px 12px; font-weight: 700; font-size: 16px; }
 .counter-box input { font: inherit; font-weight: 700; width: 84px; padding: 2px 6px; border: 1px solid var(--line); border-radius: 6px; text-align: right; }
-.counter-src { font-size: 13px; color: var(--muted); margin: 4px 0 0; }
+.counter-src { font-size: 13px; color: var(--muted); margin: 2px 0 0; }
 .condition-box { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; margin: 10px 0; background: #fdfcf9; }
 .condition-box p { margin: 0; }
 .note-box textarea {
