@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Platinum Road — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: checklist, roadmap, missables, and a cited guide for every trophy.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="title-block">
+    <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; Unofficial guide</p>
+    <h1>Platinum Road</h1>
+    <p class="subtitle">Every trophy, a roadmap to the Platinum, and a guide for each one — with its sources named. Works offline.</p>
+  </div>
+  <div class="progress-block" aria-label="Progress">
+    <p class="big-count"><span id="earnedCount">0</span><span class="of"> / 55</span></p>
+    <p class="progress-line">earned &middot; <span id="earnedGamerscore">0</span> / 1,000 Gamerscore</p>
+    <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+    <p class="progress-line small" id="gradeCounts">Platinum 0/1 &middot; Gold 0/2 &middot; Silver 0/6 &middot; Bronze 0/46</p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Views">
+  <button type="button" class="tab active" data-view="checklist">Checklist</button>
+  <button type="button" class="tab" data-view="roadmap">Roadmap</button>
+  <button type="button" class="tab" data-view="missables">Missables <span class="tab-badge">1</span></button>
+  <button type="button" class="tab" data-view="save">Save &amp; settings</button>
+</nav>
+
+<section class="controls" aria-label="Filters and settings">
+  <label class="search-label">Search <input id="search" type="search" placeholder="Trophy, mission or keyword…" autocomplete="off"></label>
+  <div class="kind-filters" role="group" aria-label="Filter by kind">
+    <button type="button" class="chip active" data-kind="all">All</button>
+    <button type="button" class="chip" data-kind="story">Story</button>
+    <button type="button" class="chip" data-kind="missable">Missable</button>
+    <button type="button" class="chip" data-kind="collectibles">Collectibles</button>
+    <button type="button" class="chip" data-kind="activities">Activities</button>
+    <button type="button" class="chip" data-kind="crime">Crime</button>
+    <button type="button" class="chip" data-kind="exploration">Exploration</button>
+  </div>
+  <label class="grade-label">Grade
+    <select id="grade">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="spoiler-toggle"><input id="spoilers" type="checkbox"> Hide story spoilers until earned</label>
+  <div class="control-buttons">
+    <button id="exportBtn" type="button">Export progress</button>
+    <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+  </div>
+</section>
+<p class="filter-note" id="filterNote"></p>
+
+<main>
+  <section id="view-checklist" class="view">
+    <div class="checklist-layout">
+      <div class="trophy-list" id="trophyList" aria-label="Trophy checklist"></div>
+      <aside class="guide-pane" id="guidePane" aria-label="Trophy guide"></aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view hidden">
+    <h2>Roadmap to the Platinum</h2>
+    <p class="roadmap-intro">Built from the official trophy descriptions. Estimated difficulty <strong>4/10</strong>, about <strong>200 hours</strong>, <strong>one playthrough</strong>, no mission replay — but free roam after the story, so nothing is missable except possibly one meditation (see Missables). Keep cheats off your trophy save: cheats disable trophies and saving.</p>
+    <div id="roadmapStages"></div>
+  </section>
+
+  <section id="view-missables" class="view hidden">
+    <h2>Missable trophies</h2>
+    <p class="roadmap-intro">Only one trophy in the whole set can possibly be missed. Everything else can be finished in free roam after the story.</p>
+    <div id="missablesList"></div>
+    <div class="save-advice">
+      <h3>Save advice</h3>
+      <p>There is no mission replay and no New Game+. The game gives you 15 manual save slots plus 1 autosave. Keep a save at the start and end of each chapter, then rotate the rest during free roam — that is the safety net PowerPyx recommends. Keep cheats off the trophy save entirely: they disable trophies and saving, and whether reloading restores trophies is disputed. If you want to experiment with cheats, do it on a separate save.</p>
+    </div>
+  </section>
+
+  <section id="view-save" class="view hidden">
+    <h2>Save &amp; settings</h2>
+    <div class="save-panel">
+      <p>Your progress is saved in this browser (localStorage) the moment you tick a trophy. Export it to a file to back it up or move it to another browser, and import that file back here.</p>
+      <p><button id="exportBtn2" type="button">Export progress (.json)</button>
+      <label class="import-btn">Import progress <input id="importFile2" type="file" accept="application/json,.json"></label></p>
+      <p><button id="resetBtn" type="button" class="danger">Reset all progress</button></p>
+      <p class="small">Export file format: a JSON list of earned trophy names, e.g. <code>["Vice Got a Price!", "Just Like Paradise"]</code>.</p>
+    </div>
+    <div class="save-panel">
+      <h3>Spoiler setting</h3>
+      <p>When “Hide story spoilers until earned” is on, the 28 hidden trophies show only as “Hidden trophy” — no name, no description, no guide — until you tick them earned. The setting is saved with your progress.</p>
+      <label class="spoiler-toggle"><input id="spoilers2" type="checkbox"> Hide story spoilers until earned</label>
+    </div>
+    <div class="save-panel">
+      <h3>About this guide</h3>
+      <p>Unofficial fan guide. Not affiliated with Rockstar Games or PlayStation. Trophy names, descriptions and grades are shown as PlayStation publishes them. Guides are written in this entry’s own words; methods played firsthand are credited to <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/">PowerPyx’s GTA 6 Trophy Guide &amp; Roadmap (Nov 18, 2026)</a>, with GTABase and the official list where noted. Anything not yet confirmed in the game is labelled “not yet checked in the game” — never presented as fact. No Rockstar logo or official artwork appears in this guide.</p>
+      <p class="small">55 trophies: 1 Platinum, 2 Gold, 6 Silver, 46 Bronze. 28 hidden, 27 visible. 1,000 Gamerscore on Xbox. Licence: MIT.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Sources: the official trophy list on <a href="https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/">Exophase</a> and <a href="https://psnprofiles.com/trophies/43531-grand-theft-auto-vi">PSNProfiles</a>; methods from <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/">PowerPyx</a> (Nov 18, 2026) and GTABase, cited per trophy. Unofficial guide — not affiliated with Rockstar Games. MIT licence.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
