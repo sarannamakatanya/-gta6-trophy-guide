@@ -5,15 +5,16 @@
 // screenshots, the first load's files and bytes, and your source), with the vendored make.fun library. Leave
 // vendor/makefun-frontend.ts as it is: the scorer requires dossier.json to be byte for byte what its own copy writes.
 //
-// Platinum Road v2 — the built guide (dossier first-load budget: 12,500 bytes gzip-9; v1 was 10,020): a 55-trophy checklist with saved progress,
-// export/import that also carries per-trophy notes, verified progress counters and
-// the spoiler setting, kind, grade and editorial content-tag filters (Strangers,
-// Money incl. robberies, Combat), a spoiler setting, a five-stage roadmap to the
-// Platinum, a missables page with four separate missability wordings, and a cited
-// guide for every trophy in app/data/trophies.json. Counters show the trophy's own
-// target with its source and confidence, and single-attempt requirements are shown
-// as conditions, never as ticking numbers. The screenshots in screenshots/ are
-// real renders of this app in desktop Chrome at 1280x800, taken with 13 of 55
+// Platinum Road v3 — the built guide (dossier first-load: 12,451 bytes gzip-9 against the 12,500 cap; v2 was 12,448): a 55-trophy
+// checklist with saved progress, export/import that also carries per-trophy notes, verified progress counters, the
+// next-up focus and the spoiler setting, kind, grade and editorial content-tag filters (Strangers, Money incl.
+// robberies, Combat), a spoiler setting, a seven-stage roadmap to the Platinum, a missables page with four separate
+// missability wordings, a verification audit strip, per-trophy step-by-step guides with a source on every step, seven
+// disputes shown both ways, a source matrix with a numbered dated source list, and a next-up planner ordered by
+// roadmap stage and missability. Counters show the trophy's own target with its source and confidence, and
+// single-attempt requirements are shown as conditions, never as ticking numbers. Guide text, steps, stages and
+// sources live in app/data/trophies.json (fetched at runtime, outside the dossier total); the shell renders them.
+// The screenshots in screenshots/ are real renders of this app in desktop Chrome at 1280x800, taken with 13 of 55
 // trophies earned, a counter part-way and a saved note on the cover trophy.
 //
 // Serve it locally with `node serve.ts`, then open http://localhost:8080.
