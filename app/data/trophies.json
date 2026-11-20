@@ -1086,7 +1086,7 @@
    "counter": {
     "target": 18,
     "unit": "meditations",
-    "extra": "10 locations including the balcony; 15/18 is the separate 100% target.",
+    "extra": "10 locations incl. balcony; 15/18 is the 100% target.",
     "src": "PowerPyx — meditation guide"
    },
    "name": "Positive Mental Attitude",
@@ -1105,10 +1105,10 @@
    ],
    "guide": "Meditate at all 18 Meditation Spots across 10 locations. Meditating with both characters at a spot counts +2, so always bring your partner; track progress under Progress, then Collections, then Exploration, then Meditations (PowerPyx). The final meditation only becomes possible once both characters are playable together, after Chapter 2's Coffee Break. MISSABLE WARNING — the only possibly-missable trophy in the game: after the Chapter 1 mission Down to Earth, Lucia meditates on the balcony at Jason's house, and PowerPyx observed the counter rise +1 — but states twice that it is currently unclear whether that meditation is required for the trophy. The Chapter 1 spot is not marked as a Meditation Spot like the other 18. Do it in Chapter 1 anyway to be safe: it costs a minute. No same-save evidence shows whether skipping it blocks the trophy, so no claim is made here either way.",
    "dispute": {
-    "q": "Is the Chapter 1 balcony meditation required?",
-    "a": "PowerPyx saw the counter rise +1 after Lucia meditated on the balcony at Jason's house after Down to Earth, and notes twice that it is unclear whether it is required.",
-    "b": "The balcony spot is not marked as a Meditation Spot like the other 18, and the 100% checklist needs only 15 of 18.",
-    "call": "Do the balcony meditation in Chapter 1 anyway - it costs a minute. No same-save evidence shows whether skipping it blocks the trophy."
+    "q": "Balcony meditation required?",
+    "a": "PowerPyx saw the counter rise +1 when Lucia meditated on the balcony after Down to Earth; it is unclear whether it is required.",
+    "b": "The balcony is not marked as a Meditation Spot like the other 18; the 100% checklist needs only 15/18.",
+    "call": "Do it in Chapter 1 anyway — a minute. No same-save evidence shows skipping blocks the trophy."
    },
    "sc": [
     "O",
