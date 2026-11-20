@@ -35,7 +35,7 @@ if (!['checklist', 'roadmap', 'missables', 'matrix', 'nextup', 'save'].includes(
 function kindLabel(k) { return { story: 'Story', collectibles: 'Collectibles', activities: 'Activities', crime: 'Crime', exploration: 'Exploration', meta: 'Meta' }[k] || k; }
 function stageName(n) { const s = stages7.find((x) => x.n === n); return s ? s.name : 'Stage ' + n; }
 function verificationLabel(v) { return { official: 'Official list', community: 'Community-verified', unconfirmed: 'Unconfirmed — not yet checked in the game' }[v] || v; }
-function missText(t) { return 'Missability: ' + { auto: 'Automatic during story. Timing: earned during required story progression.', none: 'No known missable step.', potentially: 'Potentially missable. Timing: do the Chapter 1 step in Chapter 1 to be safe; whether skipping blocks it is not established.', unknown: 'Not established. Timing and method: not established.' }[t.miss]; }
+function missText(t) { return 'Missability: ' + { auto: 'Automatic during story. Timing: earned during required story progression.', none: 'No known missable step.', potentially: 'Potentially missable. Timing: do the Chapter 1 step in Chapter 1 to be safe.', unknown: 'Not established. Timing and method: not established.' }[t.miss]; }
 function isHidden(t) { return spoilersOn && t.hidden && !earned.has(t.name); }
 function srcName(code) { const s = srcs.find((x) => x.c === code); return s ? s.n + ' (' + s.d + ')' : code; }
 function saveProgress() {
@@ -65,18 +65,19 @@ function renderAudit() {
   const hidden = trophies.filter((t) => t.hidden).length;
   const disp = trophies.filter((t) => t.dispute).length;
   const unk = trophies.filter((t) => t.verification === 'unconfirmed');
-  $('audit').textContent = `${guides}/55 guides cited · ${cited}/${steps} steps cited · ${hidden}/28 hidden · ${srcs.length} sources read ${N1920} · ${disp} disagreements logged · ${unk.length} unknown: ${unk.map((t) => t.name).join(', ') || 'none'}`;
+  const miss = trophies.filter((t) => t.missable).length, timed = trophies.filter((t) => t.timed).length;
+  $('audit').textContent = `✓ ${guides}/55 guides · ${cited}/${steps} steps · ${hidden}/28 hidden · ${srcs.length} sources ${N1920} · ${disp} disputes · ${miss} missable · ${timed} timed · ${unk.length} unknown: ${unk.map((t) => t.name).join(', ') || 'none'}`;
 }
-function renderStages() {
+function renderNextStrip() {
   const host = $('stageStrip');
   host.replaceChildren();
-  for (const s of stages7) {
-    const ts = trophies.filter((t) => t.s7 === s.n), got = ts.filter((t) => earned.has(t.name)).length;
-    const b = el('button', 'stage-chip');
-    b.type = 'button';
-    b.append(el('b', null, `${s.name} `), document.createTextNode(`${got}/${ts.length}`));
-    b.addEventListener('click', () => setView('roadmap'));
-    host.append(b);
+  host.append(el('span', 'tag-label', 'Next up —'));
+  for (const [t, why] of nextItems().slice(0, 4)) {
+    const c = el('button', 'chip');
+    c.type = 'button';
+    c.append(el('b', null, t.name + ' '), document.createTextNode(why.split(' — ')[0]));
+    c.addEventListener('click', () => { selectedId = t.id; renderAll(); });
+    host.append(c);
   }
 }
 function countOf(t) { return Math.max(0, Math.min(t.counter ? t.counter.target : 0, Number(counts[t.id]) || 0)); }
@@ -101,7 +102,12 @@ function renderChecklist() {
   noteEl.textContent = tagNote() || (shown.length === trophies.length
     ? 'Showing all 55 trophies. Click a trophy to open its guide; tick the box when you earn it.'
     : `Showing ${shown.length} of 55 trophies.`);
-  for (const t of shown) {
+  for (const s of stages7) {
+    const ts = shown.filter((t) => t.s7 === s.n);
+    if (!ts.length) continue;
+    const got = trophies.filter((t) => t.s7 === s.n && earned.has(t.name)).length, tot = trophies.filter((t) => t.s7 === s.n).length;
+    listEl.append(el('h3', 'chapter-head', `${s.name} — ${s.sub} · ${got}/${tot}`));
+    for (const t of ts) {
     const row = el('button', 'trophy-row' + (earned.has(t.name) ? ' earned' : '') + (t.id === selectedId ? ' selected' : ''));
     row.type = 'button';
     const box = document.createElement('input');
@@ -122,7 +128,6 @@ function renderChecklist() {
     if (t.verification === 'unconfirmed') meta.append(badge('Not yet checked', 'unconfirmed'));
     if (t.dispute) meta.append(badge('Disputed', 'unconfirmed'));
     if (notes[t.id]) meta.append(badge('Note', 'note-badge'));
-    if (!hidden && (t.sc || []).length) meta.append(el('span', 'srcrail', 'Sources: ' + t.sc.join('·')));
     body.append(name, desc, meta);
     if (!hidden && t.counter) body.append(el('span', 'trophy-desc', `Counter: ${countOf(t).toLocaleString()} / ${t.counter.target.toLocaleString()} ${t.counter.unit}`));
     const dot = el('span', `grade-dot grade-${t.grade}`, { platinum: '◆', gold: '●', silver: '●', bronze: '●' }[t.grade]);
@@ -130,6 +135,7 @@ function renderChecklist() {
     row.append(box, body, dot);
     row.addEventListener('click', () => { selectedId = t.id; renderAll(); });
     listEl.append(row);
+    }
   }
   if (!shown.length) listEl.append(el('p', null, 'No trophies match these filters.'));
 }
@@ -147,46 +153,15 @@ function renderGuidePane() {
   }
   paneEl.append(el('h2', null, t.name));
   const badges = el('p', 'trophy-meta');
-  badges.append(gb(t), badge(`${t.gamerscore} Gamerscore · ${kindLabel(t.kind)} · ${stageName(t.s7)}`));
+  badges.append(gb(t), badge(`${t.gamerscore}G · ${kindLabel(t.kind)}`));
   if (t.hidden) badges.append(badge('Hidden on PlayStation', 'hidden-badge'));
   if (t.missable) badges.append(badge('Potentially missable', 'missable'));
   paneEl.append(badges);
   paneEl.append(el('p', 'official-desc', `Official description: “${t.description}”`));
-  paneEl.append(el('p', 'miss-line', missText(t)));
-  paneEl.append(el('h3', null, 'Guide'));
-  paneEl.append(el('p', 'guide-text', t.guide));
-  paneEl.append(el('h3', null, 'Steps — each with its source'));
-  if ((t.steps || []).length) {
-    const ol = el('ol', 'steps');
-    for (const [i, s] of t.steps.entries()) {
-      const li = el('li', null, `${i + 1}. ${s.t} `);
-      li.append(el('span', 'step-src', `[${s.s}]`));
-      ol.append(li);
-    }
-    paneEl.append(ol);
-  } else {
-    paneEl.append(el('p', 'nosteps', 'No steps yet — the method is not yet established. See the dispute below; this guide lists no method until a firsthand report confirms one.'));
-  }
-  if (t.dispute) {
-    const d = el('div', 'dispute');
-    d.append(el('h3', null, `SOURCES DIFFER — ${t.dispute.q}`));
-    d.append(el('p', null, `A: ${t.dispute.a}`));
-    d.append(el('p', null, `B: ${t.dispute.b}`));
-    d.append(el('p', null, `Guide's call: ${t.dispute.call}`));
-    paneEl.append(d);
-  }
-  paneEl.append(el('h3', null, 'Sources'));
-  const src = el('p', 'sources');
-  (t.sc || []).forEach((code, i) => {
-    const link = srcLink(code);
-    if (i) src.append(document.createTextNode(' · '));
-    if (link.href) { const a = el('a', null, link.text); a.href = link.href; a.target = '_blank'; a.rel = 'noopener'; src.append(a); }
-    else src.append(document.createTextNode(link.text));
-  });
-  paneEl.append(src);
+  paneEl.append(el('p', 'guide-lead', t.guide.split('. ')[0] + '.'));
+  paneEl.append(el('p', t.missable ? 'verification-note' : 'miss-line', missText(t)));
   if (t.counter) {
     const box = el('div', 'counter-box');
-    box.append(el('h3', null, 'Progress counter'));
     const line = el('div', 'counter-line');
     const minus = el('button', null, '−'); minus.type = 'button'; minus.setAttribute('aria-label', 'Decrease counter');
     const input = document.createElement('input');
@@ -211,6 +186,37 @@ function renderGuidePane() {
     box.append(el('p', 'counter-src', `Source: ${t.condition_src} — community-reported. One attempt only, not a lifetime total.`));
     paneEl.append(box);
   }
+  if (t.dispute) {
+    const d = el('div', 'dispute');
+    d.append(el('h3', null, `SOURCES DIFFER — ${t.dispute.q}`));
+    d.append(el('p', null, `A: ${t.dispute.a}`));
+    d.append(el('p', null, `B: ${t.dispute.b}`));
+    d.append(el('p', null, `Guide's call: ${t.dispute.call}`));
+    paneEl.append(d);
+  }
+  paneEl.append(el('h3', null, 'Guide'));
+  paneEl.append(el('p', 'guide-text', t.guide));
+  paneEl.append(el('h3', null, 'Steps — each with its source'));
+  if ((t.steps || []).length) {
+    const ol = el('ol', 'steps');
+    for (const [i, s] of t.steps.entries()) {
+      const li = el('li', null, `${i + 1}. ${s.t} `);
+      li.append(el('span', 'step-src', `[${s.s}]`));
+      ol.append(li);
+    }
+    paneEl.append(ol);
+  } else {
+    paneEl.append(el('p', 'nosteps', 'No steps yet — the method is not yet established. See the dispute below; this guide lists no method until a firsthand report confirms one.'));
+  }
+  paneEl.append(el('h3', null, 'Sources'));
+  const src = el('p', 'sources');
+  (t.sc || []).forEach((code, i) => {
+    const link = srcLink(code);
+    if (i) src.append(document.createTextNode(' · '));
+    if (link.href) { const a = el('a', null, link.text); a.href = link.href; a.target = '_blank'; a.rel = 'noopener'; src.append(a); }
+    else src.append(document.createTextNode(link.text));
+  });
+  paneEl.append(src);
   paneEl.append(el('h3', null, 'My note'));
   const noteBox = el('div', 'note-box');
   const ta = document.createElement('textarea');
@@ -367,7 +373,7 @@ function setView(view) {
   if (view === 'nextup') renderNextUp();
 }
 function renderAll() {
-  renderProgress(); renderAudit(); renderStages(); renderChecklist(); renderGuidePane();
+  renderProgress(); renderAudit(); renderNextStrip(); renderChecklist(); renderGuidePane();
   if (currentView === 'roadmap') renderRoadmap();
   if (currentView === 'missables') renderMissables();
   if (currentView === 'matrix') renderMatrix();

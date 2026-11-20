@@ -2265,37 +2265,44 @@
  "stages7": [
   {
    "n": 1,
-   "name": "S1 Story spine",
+   "name": "Ch. 1–2 · Story spine",
+   "sub": "Leonida opens",
    "text": "Chapters 1-5 in order: the 12 story trophies, plus the final mission. Chapter trophies can pop a mission or two late. Do the Chapter 1 balcony meditation for Positive Mental Attitude while you are here."
   },
   {
    "n": 2,
-   "name": "S2 Side strands",
+   "name": "Contacts · Side strands",
+   "sub": "Vice City",
    "text": "Character strands and strangers: Andy, Kenton, Billy, Randy, Tyrone, Bret, and the 8 Strangers & Freaks strands. Quest givers return after the story, so strands can be finished in free roam. Meditation spots belong here too."
   },
   {
    "n": 3,
-   "name": "S3 Collectibles & exploration",
+   "name": "Collectibles · Exploration",
+   "sub": "Across Leonida",
    "text": "Card sets, WAiNK locations, garages, vehicle registration, and unfogging the map. The WAiNK guide lists 89 locations — not the complete pool of 100."
   },
   {
    "n": 4,
-   "name": "S4 Activities & challenges",
+   "name": "Activities · Challenges",
+   "sub": "Vice City",
    "text": "Stunts, shooting ranges, drone races, races, fishing, arcade, challenges, and the gym. Most count toward the 100% checklist; the trophy targets are lower than the checklist targets."
   },
   {
    "n": 5,
-   "name": "S5 Crime & money",
+   "name": "Crime & money",
+   "sub": "Vice City",
    "text": "Partner robberies, bank vaults, armored trucks, gang operations, the tank, the plane, the showroom and the bowling alley. Needs the Key Cloner, Snap Gun and Dye Pack Jammer from Chapter 3, and the Chapter 4 mission That's Where The Money Is... for the banks."
   },
   {
    "n": 6,
-   "name": "S6 Feats & riddles",
+   "name": "Hidden one-offs · Feats",
+   "sub": "Vice City & Kelly County",
    "text": "The cryptic trophies: a cocktail with a view, a roadside UFO, a melee drive-by from a bike, and one trophy with no established method at all. All four are free-roam activities once their method is known."
   },
   {
    "n": 7,
-   "name": "S7 Platinum",
+   "name": "Finale · The Platinum",
+   "sub": "After the story",
    "text": "The long tail: A Long Road (100% on the in-game checklist), then the Platinum pops the moment the other 54 are earned. Nothing here is missable; all of it can be finished in free roam."
   }
  ],
