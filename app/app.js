@@ -3,6 +3,7 @@ const SPK = 'platinum-road-gta6-spoilers';
 const NK = 'platinum-road-gta6-v2-notes';
 const CK = 'platinum-road-gta6-v2-counts';
 const FK = 'platinum-road-gta6-v2-focus';
+const TK = 'platinum-road-gta6-saved';
 const PP = 'https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/';
 const EXO = 'https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/';
 const N1920 = 'Nov 19–20, 2026';
@@ -11,7 +12,7 @@ const $ = (id) => document.getElementById(id);
 function el(tag, cls, txt) { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
 function badge(txt, cls) { return el('span', 'badge' + (cls ? ' ' + cls : ''), txt); }
 function gb(t) { return badge(t.grade, 'grade-' + t.grade); }
-const listEl = $('trophyList'), paneEl = $('guidePane'), searchEl = $('search'), gradeEl = $('grade'), noteEl = $('filterNote');
+const listEl = $('trophyList'), paneEl = $('guidePane'), searchEl = $('search'), noteEl = $('filterNote');
 const params = new URLSearchParams(location.search);
 const doc = await (await fetch('data/trophies.json')).json();
 const trophies = doc.trophies, stages7 = doc.stages7, srcs = doc.srcs;
@@ -28,7 +29,7 @@ try { notes = JSON.parse(localStorage.getItem(NK) ?? '{}'); } catch { notes = {}
 try { counts = JSON.parse(localStorage.getItem(CK) ?? '{}'); } catch { counts = {}; }
 let focusId = Number(localStorage.getItem(FK) ?? '0') || null;
 if (!trophies.some((t) => t.id === focusId)) focusId = null;
-let activeKind = 'all', activeTag = null;
+let activeKind = 'all', activeTag = null, activeGrade = 'all';
 let selectedId = Number(params.get('trophy')) || trophies[0].id;
 let currentView = params.get('view') || 'checklist';
 if (!['checklist', 'roadmap', 'missables', 'matrix', 'nextup', 'save'].includes(currentView)) currentView = 'checklist';
@@ -39,6 +40,7 @@ function missText(t) { return 'Missability: ' + { auto: 'Automatic during story.
 function isHidden(t) { return spoilersOn && t.hidden && !earned.has(t.name); }
 function srcName(code) { const s = srcs.find((x) => x.c === code); return s ? s.n + ' (' + s.d + ')' : code; }
 function saveProgress() {
+  localStorage.setItem(TK, Date.now());
   localStorage.setItem(SK, JSON.stringify([...earned]));
   localStorage.setItem(SPK, spoilersOn ? '1' : '0');
   localStorage.setItem(NK, JSON.stringify(notes));
@@ -57,6 +59,8 @@ function renderProgress() {
   $('points').textContent = trophies.filter((t) => earned.has(t.name)).reduce((s, t) => s + (PTS[t.grade] || 0), 0);
   $('progressFill').style.width = `${Math.round((earned.size / trophies.length) * 100)}%`;
   $('gradeCounts').textContent = gradeCountsText();
+  const saved = +localStorage.getItem(TK);
+  if (saved) $('savedLine').textContent = `Saved on this device · ${new Date(saved).toDateString().slice(4)}`;
 }
 function renderAudit() {
   const steps = trophies.reduce((s, t) => s + (t.steps || []).length, 0);
@@ -65,8 +69,8 @@ function renderAudit() {
   const hidden = trophies.filter((t) => t.hidden).length;
   const disp = trophies.filter((t) => t.dispute).length;
   const unk = trophies.filter((t) => t.verification === 'unconfirmed');
-  const miss = trophies.filter((t) => t.missable).length, timed = trophies.filter((t) => t.timed).length;
-  $('audit').textContent = `✓ ${guides}/55 guides · ${cited}/${steps} steps · ${hidden}/28 hidden · ${srcs.length} sources ${N1920} · ${disp} disputes · ${miss} missable · ${timed} timed · ${unk.length} unknown: ${unk.map((t) => t.name).join(', ') || 'none'}`;
+  const miss = trophies.filter((t) => t.missable).length, risk = trophies.filter((t) => t.atrisk).length;
+  $('audit').textContent = `✓ ${guides}/55 guides · ${cited}/${steps} steps · 10 2+ backed · ${hidden}/28 hidden · ${srcs.length} sources ${N1920} · ${disp} disputes · ${miss} missable · ${risk} at risk · 263 collectibles · ${unk.length} unknown: ${unk.map((t) => t.name).join(', ') || 'none'}`;
 }
 function renderNextStrip() {
   const host = $('stageStrip');
@@ -84,8 +88,9 @@ function countOf(t) { return Math.max(0, Math.min(t.counter ? t.counter.target :
 function trophyMatchesFilters(t) {
   const q = searchEl.value.trim().toLowerCase();
   if (q && !(t.name.toLowerCase().includes(q) || t.description.toLowerCase().includes(q) || t.guide.toLowerCase().includes(q))) return false;
-  if (gradeEl.value !== 'all' && t.grade !== gradeEl.value) return false;
+  if (activeGrade !== 'all' && t.grade !== activeGrade) return false;
   if (activeTag && !(t.tags || []).includes(activeTag)) return false;
+  if (activeKind === 'atrisk') return !!t.atrisk;
   if (activeKind === 'missable') return t.missable;
   if (activeKind !== 'all' && t.kind !== activeKind) return false;
   return true;
@@ -125,6 +130,8 @@ function renderChecklist() {
     if (!hidden && t.gamerscore) meta.append(badge(`${t.gamerscore}G`));
     if (t.hidden && !hidden) meta.append(badge('Hidden', 'hidden-badge'));
     if (t.missable) meta.append(badge('Missable', 'missable'));
+    if (t.atrisk) meta.append(badge('At risk', 'unconfirmed'));
+    if (t.sc.length > 1) meta.append(badge(t.sc.length + ' sources'));
     if (t.verification === 'unconfirmed') meta.append(badge('Not yet checked', 'unconfirmed'));
     if (t.dispute) meta.append(badge('Disputed', 'unconfirmed'));
     if (notes[t.id]) meta.append(badge('Note', 'note-badge'));
@@ -156,6 +163,7 @@ function renderGuidePane() {
   badges.append(gb(t), badge(`${t.gamerscore}G · ${kindLabel(t.kind)}`));
   if (t.hidden) badges.append(badge('Hidden on PlayStation', 'hidden-badge'));
   if (t.missable) badges.append(badge('Potentially missable', 'missable'));
+  if (t.atrisk) badges.append(badge('At risk', 'unconfirmed'));
   paneEl.append(badges);
   paneEl.append(el('p', 'official-desc', `Official description: “${t.description}”`));
   paneEl.append(el('p', 'guide-lead', t.guide.split('. ')[0] + '.'));
@@ -191,7 +199,7 @@ function renderGuidePane() {
     d.append(el('h3', null, `SOURCES DIFFER — ${t.dispute.q}`));
     d.append(el('p', null, `A: ${t.dispute.a}`));
     d.append(el('p', null, `B: ${t.dispute.b}`));
-    d.append(el('p', null, `Guide's call: ${t.dispute.call}`));
+    d.append(el('p', null, `Our call: ${t.dispute.call}`));
     paneEl.append(d);
   }
   paneEl.append(el('h3', null, 'Guide'));
@@ -266,6 +274,7 @@ function renderMissables() {
   host.replaceChildren();
   const pma = trophies.find((t) => t.miss === 'potentially');
   if (pma) host.append(missableCard(pma, `⚠ ${pma.name} — the only potentially missable trophy`));
+  for (const t of trophies.filter((t) => t.atrisk)) host.append(missableCard(t, `⚠ ${t.name} — at risk`));
   const unknown = trophies.filter((t) => t.miss === 'unknown');
   if (unknown.length) {
     host.append(el('h3', null, 'Not established — method unknown, missability unknown'));
@@ -293,6 +302,9 @@ function renderMatrix() {
     table.append(row);
   }
   host.append(table);
+  let h = '<table class="matrix"><tr><th>Site</th><th>Claims</th><th>Trophies</th></tr>';
+  for (const [c, cl, tr] of doc.siteClaims) h += `<tr><td>${srcName(c)}</td><td>${cl}</td><td>${tr}</td></tr>`;
+  host.insertAdjacentHTML('beforeend', h + '</table>');
   const leg = $('srcLegend');
   leg.replaceChildren();
   const ol = el('ol');
@@ -392,7 +404,12 @@ document.querySelectorAll('.chip[data-tag]').forEach((c) => c.addEventListener('
   renderChecklist();
 }));
 searchEl.addEventListener('input', renderChecklist);
-gradeEl.addEventListener('change', renderChecklist);
+['all', 'platinum', 'gold', 'silver', 'bronze'].forEach((g, i) => {
+  const c = el('button', 'chip' + (i ? '' : ' active'));
+  c.textContent = ['All', 'P', 'G', 'S', 'B'][i];
+  c.onclick = () => { activeGrade = g; [...$('gradeRow').children].forEach((x) => x.classList.toggle('active', x === c)); renderChecklist(); };
+  $('gradeRow').append(c);
+});
 $('exportBtn').addEventListener('click', exportProgress);
 $('exportBtn2').addEventListener('click', exportProgress);
 $('importFile').addEventListener('change', (e) => importProgressFile(e.target.files[0]));

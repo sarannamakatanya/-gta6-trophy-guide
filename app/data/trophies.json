@@ -27,15 +27,15 @@
    "steps": [
     {
      "t": "The Platinum pops the moment the other 54 trophies are all earned, so there is no separate task to do for it. Work through the roadmap in order - story first, then character strands, activities, crime, and finally the 100% cleanup - and this one closes the set.",
-     "s": "O"
+     "s": "O+P"
     },
     {
      "t": "Expect roughly 200 hours for the full run; there is no shortcut.",
-     "s": "O"
+     "s": "P"
     },
     {
      "t": "Only one trophy is potentially missable (Positive Mental Attitude - see Missables), and only one has no established method yet (Bad Luck, I Guess).",
-     "s": "O"
+     "s": "P"
     }
    ]
   },
@@ -222,7 +222,13 @@
      "t": "The trophy can pop a mission or two late, as with the other chapter trophies.",
      "s": "P"
     }
-   ]
+   ],
+   "dispute": {
+    "q": "Which chapter is the final mission?",
+    "a": "PowerPyx lists the final mission, Starting From Zero, under Chapter 4.",
+    "b": "PowerPyx lists the Operation Savage Glory trophy under Chapter 5.",
+    "call": "Chapter labels differ between PowerPyx pages, so follow the mission order, not the chapter number. Safe play: finish every mission in order - the trophy pops on the final mission whatever chapter a guide assigns it."
+   }
   },
   {
    "id": 7,
@@ -519,17 +525,23 @@
    "steps": [
     {
      "t": "Reach 100% on the in-game completion checklist (Progress, then Stats, then 100% Completion — it only becomes visible after the story, though progress made during the story already counts). The checklist has 35 tasks, but most ask for only part of a total, so 100% here is closer to 60% true completion: 200 of 277 base vehicles, 100 animals studied (no definitive species total — reports differ), 70 of 80 challenges, 300 of 397 stunts, 15 of 18 card sets.",
-     "s": "P"
+     "s": "P+C"
     },
     {
      "t": "Only a few tasks demand everything — all 39 Gang Operations, all 42 Shooting Range golds, all 42 Drone Time Trials, all 15 of Bret's Target Decks, and all Underwater Discoveries. Nothing on the list is missable; all of it can be finished in free roam after the story.",
-     "s": "P"
+     "s": "P+C"
     },
     {
      "t": "The animal total is disputed across outlets (255 per PowerPyx, over 160 elsewhere), but the requirement — study 100 — is agreed. This is the long tail of the Platinum: leave it for Stage 5 and tick off its tasks alongside the other trophies.",
      "s": "P"
     }
-   ]
+   ],
+   "dispute": {
+    "q": "How many animals are there to study?",
+    "a": "PowerPyx 100% checklist: 255 study entries.",
+    "b": "Other reports give 160+ / 170 species - no single species denominator is established.",
+    "call": "Do not trust any species total. Safe play: study 100 animals for the checklist target; the disputed total changes nothing about the method."
+   }
   },
   {
    "id": 15,
@@ -744,7 +756,13 @@
      "t": "Street races count toward the Strangers & Freaks strand Yago as well, so combine the two where you can.",
      "s": "P"
     }
-   ]
+   ],
+   "dispute": {
+    "q": "How many races are available?",
+    "a": "PowerPyx lists 40 available races.",
+    "b": "A competing figure says 39 available races.",
+    "call": "Either total leaves room for the 20 wins this trophy needs. Safe play: win 20 different races; the disputed availability count does not change the method."
+   }
   },
   {
    "id": 20,
@@ -976,7 +994,7 @@
     "q": "Is the timed Yago race missable?",
     "a": "PowerPyx walkthrough marks Race Against Yago '(Time-Sensitive, Missable)'; OutputLag advises saving before the timed race - a timed mission can vanish if you leave it.",
     "b": "PowerPyx trophy guide says Strangers & Freaks strands survive after the story; happygamer notes other guides do not list it as missable.",
-    "call": "Accept the timed invitation as soon as it appears and make a manual save first. No firsthand expired-invitation evidence either way - do not claim a permanent lockout."
+    "call": "Accept the timed invitation as soon as it appears and make a manual save first. No firsthand expired-invitation evidence either way - do not claim a permanent lockout. Safe play: accept the timed invitation as soon as it appears and make a manual save first."
    },
    "sc": [
     "O",
@@ -988,7 +1006,7 @@
    "steps": [
     {
      "t": "Complete 8 stranger mission strands across Leonida. Four counting strands are confirmed by PowerPyx: Kirk (the Skunk Ape), Kyle at McKittrick Farm, Yago (street racing), and Pilot Pete. Kirk's strand runs Search for the Skunk Ape, then Search for Tree Effigies, then Help Kirk Find Mr. Mangrove; the final mission is Lucia only, at night, from Chapter 2.",
-     "s": "P"
+     "s": "P+F"
     },
     {
      "t": "Yago's strand ends in the Freeway Run at the Hit 'n' Run VC meetup in Salton - return there, speak with Santiago, select the second race; winning pays $3,800. The race is time-sensitive (hourglass icon), so accept the invitation as soon as it appears and make a manual save first; whether an expired invitation can be recovered has no firsthand evidence either way. Dunk (Dunk's Robbery Tips, Chapter 3) is a named candidate whose counting status is not found yet - do not count him toward the 8.",
@@ -996,9 +1014,11 @@
     },
     {
      "t": "Moses, Tyrone, Yasmani, Andy, Billy and Eddie do NOT count toward this total, and the remaining four counting strands are not yet confirmed - PowerPyx says more strangers are yet to be discovered. Shirley's two Chapter 1 errands (Get Shirley's Rum, Steal the Scooter) are missable, but Shirley is not an official Stranger & Freak, so they do not affect this trophy. Do not assume a stranger counts until it is confirmed.",
-     "s": "P"
+     "s": "P+F"
     }
-   ]
+   ],
+   "atrisk": true,
+   "risk": "Race Against Yago is a timed invitation (hourglass icon) - PowerPyx walkthrough marks it Time-Sensitive, Missable; OutputLag advises saving before the timed race. The strand may be lost if the invitation expires."
   },
   {
    "id": 26,
@@ -1108,7 +1128,7 @@
     "q": "Balcony meditation required?",
     "a": "PowerPyx saw the counter rise +1 when Lucia meditated on the balcony after Down to Earth; it is unclear whether it is required.",
     "b": "The balcony is not marked as a Meditation Spot like the other 18; the 100% checklist needs only 15/18.",
-    "call": "Do it in Chapter 1 anyway — a minute. No same-save evidence shows skipping blocks the trophy."
+    "call": "Do it in Chapter 1 anyway — a minute. No same-save evidence shows skipping blocks the trophy. Safe play: do the balcony meditation in Chapter 1 anyway - it costs a minute."
    },
    "sc": [
     "O",
@@ -1155,7 +1175,7 @@
     "q": "Which animal unlocks Fair Game?",
     "a": "Single-animal claims circulate in community posts, each naming a different animal.",
     "b": "PowerPyx: the exact animal is still undergoing confirmation.",
-    "call": "Do not trust any single-animal claim. Clearing all 15 Target Decks is required for 100% anyway and should cover it - inference, not confirmation."
+    "call": "Do not trust any single-animal claim. Clearing all 15 Target Decks is required for 100% anyway and should cover it - inference, not confirmation. Safe play: clear all 15 Target Decks; do not trust any single-animal claim."
    },
    "sc": [
     "O",
@@ -1261,7 +1281,13 @@
      "t": "This pairs naturally with Whip It Good (scan vehicles) and exploring for The Goodtime State: scan everything you pass instead of making a separate trip for it.",
      "s": "P"
     }
-   ]
+   ],
+   "dispute": {
+    "q": "Is the 89-location guide the complete pool?",
+    "a": "PowerPyx WAiNK guide lists 89 locations: 31 landmarks + 35 curiosities + 23 sculptures.",
+    "b": "The trophy needs 100 locations.",
+    "call": "89 is not the complete pool - more locations exist beyond the guide. Safe play: use the 89 as a start, then scan unlisted spots as you explore."
+   }
   },
   {
    "id": 32,
@@ -1429,7 +1455,13 @@
      "t": "Do it alongside You WAiNKer! and The Goodtime State.",
      "s": "P"
     }
-   ]
+   ],
+   "dispute": {
+    "q": "100 of 557, or 200 of 277?",
+    "a": "The roadmap launch figure is 557 vehicles in total.",
+    "b": "PowerPyx: 200 of 277 base models scanned for 100%.",
+    "call": "557 is the launch vehicle figure, not a base-model denominator. Safe play: scan 100 vehicles for this trophy; 200 of 277 base models is the separate 100% target."
+   }
   },
   {
    "id": 36,
@@ -1620,7 +1652,7 @@
     "q": "22 bank jobs or 8 vaults?",
     "a": "KeenGamer's 100% list: 22 bank jobs AND 8 bank vault robberies as separate lines.",
     "b": "PowerPyx bank-jobs page: 22 locations = 14 small banks + 8 large vaults.",
-    "call": "Both are right: 22 jobs in total, of which 8 are large vaults. This trophy needs 5 vaults; 100% needs all 22 jobs."
+    "call": "Both are right: 22 jobs in total, of which 8 are large vaults. This trophy needs 5 vaults; 100% needs all 22 jobs. Safe play: this trophy needs 5 vaults; 100% needs all 22 jobs."
    },
    "sc": [
     "O",
@@ -1630,7 +1662,7 @@
    "steps": [
     {
      "t": "Rob 5 bank vaults and escape after each one. First finish the Chapter 4 optional mission That's Where The Money Is… (Wait at the Cafe); then tail a security van to a bank and bring your partner along (PowerPyx).",
-     "s": "P"
+     "s": "P+B"
     },
     {
      "t": "After that, you can pay Yasmani $10,000 for security-van tips — which requires his earlier quests, including robbing 2 Payday Loans. There are 22 bank jobs in total - 14 small banks plus 8 large vaults: 5 vaults for this trophy, all 22 jobs for 100% (the checklist also lists 8 of 8 vaults hit as its own line).",
@@ -1792,7 +1824,7 @@
     "q": "Is In The Beginning... confirmed on PS5?",
     "a": "PowerPyx (Nov 19-20) gives the full method with author screenshots: Ocean View Rooftop Bar, $10 apple martini, drink standing next to the bar.",
     "b": "OutputLag, KeenGamer and cryptogames still list it as unconfirmed.",
-    "call": "Follow the PowerPyx method. The secondary lists are stale relative to PowerPyx Nov 19-20; the Xbox video corroborates it."
+    "call": "Follow the PowerPyx method. The secondary lists are stale relative to PowerPyx Nov 19-20; the Xbox video corroborates it. Safe play: follow the PowerPyx method at the Ocean View Rooftop Bar."
    },
    "sc": [
     "O",
@@ -1803,11 +1835,11 @@
    "steps": [
     {
      "t": "Go to the Ocean View Rooftop Bar on Ocean Beach and take the rooftop-access elevator up. Buy the $10 apple martini at the bar, then drink it while standing next to the bar and the trophy pops.",
-     "s": "P"
+     "s": "P+X"
     },
     {
      "t": "PowerPyx gives this method with author screenshots from its own playthrough (Nov 19-20, 2026); an Xbox video of the same method corroborates it. The older Xbox-only caveat is stale - the method is now in the walkthrough, not just a player report.",
-     "s": "P"
+     "s": "P+X"
     }
    ]
   },
@@ -1955,7 +1987,7 @@
    "steps": [
     {
      "t": "Perform 500 Criminal Profile actions. The description gives no count; the 500 figure and the counting method come from PowerPyx's firsthand play, corroborated by GTABase.",
-     "s": "P"
+     "s": "P+G"
     },
     {
      "t": "Turn on Criminal Profile notifications first — Settings, then UI, then HUD Notifications, then Criminal Profile set to On — and a demon face appears on screen whenever an action counts. You can view your count by clicking the trophy in the trophy list.",
@@ -1965,7 +1997,15 @@
      "t": "Your actions shape a profile — Professional, Hardened, Violent, Psycho, or Irredeemable — and Irredeemable is permanent, so avoid it if you care about the other profiles. The count builds across the whole playthrough, so this usually pops late.",
      "s": "P"
     }
-   ]
+   ],
+   "dispute": {
+    "q": "Is 500 the real target?",
+    "a": "PowerPyx firsthand play: 500 Criminal Profile actions, corroborated by GTABase.",
+    "b": "The official description gives no number at all.",
+    "call": "500 is community-reported, not platform data. Safe play: turn Criminal Profile notifications on and watch the in-game count climb; do not trust the description alone."
+   },
+   "atrisk": true,
+   "risk": "Your Criminal Profile can turn Irredeemable, and Irredeemable is permanent (PowerPyx) - the 500 actions still count, but the other profiles become unreachable on that save."
   },
   {
    "id": 49,
@@ -1988,7 +2028,7 @@
     "q": "Is Bad Luck, I Guess a story trophy?",
     "a": "ofzenandcomputing calls it a story trophy that unlocks during the campaign.",
     "b": "PowerPyx lists it as currently unknown, believed related to the Payday Loans store from the prologue.",
-    "call": "Neither claim is confirmed. Treat both as guesses; this guide lists no method until a firsthand report confirms one."
+    "call": "Neither claim is confirmed. Treat both as guesses; this guide lists no method until a firsthand report confirms one. Safe play: list no method until a firsthand report confirms one."
    },
    "sc": [
     "O",
@@ -2019,7 +2059,7 @@
     "q": "Which UFO lead is right?",
     "a": "PowerPyx (Nov 19-20): road NW of Starlet Motel, Kelly County, after 2AM, solo; blinking car, UFO drops an abducted woman, return her to her car.",
     "b": "OutputLag lists a Crosstown glowing-graffiti six-digit code safe and a Lucia Chapter 2 abduction side story - and says neither is confirmed yet.",
-    "call": "Follow the PowerPyx method. The graffiti-code lead is unconfirmed - do not copy it."
+    "call": "Follow the PowerPyx method. The graffiti-code lead is unconfirmed - do not copy it. Safe play: follow the PowerPyx roadside-UFO method; do not copy the graffiti-code lead."
    },
    "sc": [
     "O",
@@ -2076,7 +2116,13 @@
      "t": "Do it in a crowded area such as Vice City or Ocean Beach, where pedestrians are dense enough to chain 10 kicks inside the minute. This is the PowerPyx method (Nov 19-20, 2026), confirming the motorcycle-kick theory the guide previously listed only as a guess.",
      "s": "P"
     }
-   ]
+   ],
+   "dispute": {
+    "q": "5G or 10G for the cryptic trophies?",
+    "a": "ofzenandcomputing lists the four cryptic trophies at 10G each.",
+    "b": "PowerPyx and GTABase list 5G each, and the per-trophy values sum to exactly 1,000 with 5G here.",
+    "call": "Use 5G. Safe play: trust the 1,000G sum - the 10G figure would break it."
+   }
   },
   {
    "id": 52,
@@ -2357,5 +2403,57 @@
    "n": "PowerPyx - All Strangers & Freaks Side Missions",
    "d": "Nov 2026"
   }
+ ],
+ "siteClaims": [
+  [
+   "O",
+   1,
+   55
+  ],
+  [
+   "P",
+   160,
+   54
+  ],
+  [
+   "C",
+   2,
+   0
+  ],
+  [
+   "B",
+   1,
+   0
+  ],
+  [
+   "G",
+   1,
+   4
+  ],
+  [
+   "X",
+   2,
+   2
+  ],
+  [
+   "H",
+   1,
+   1
+  ],
+  [
+   "S",
+   0,
+   0
+  ],
+  [
+   "R",
+   0,
+   1
+  ],
+  [
+   "F",
+   2,
+   1
+  ]
  ]
 }

@@ -21,7 +21,7 @@ button{font:inherit;cursor:pointer}
 .tab.active{background:#fff;color:#d24e2a}
 .tab-badge{display:inline-block;background:#d24e2a;color:#fff;border-radius:10px;font-size:11px;padding:0 6px;margin-left:2px}
 .controls{display:flex;gap:6px;align-items:center;flex-wrap:wrap;padding:5px 28px;background:#fff;border-top:1px solid #ddd5c8;border-bottom:1px solid #ddd5c8}
-.search-label input,.grade-label select{font:inherit;padding:4px 8px;border:1px solid #ddd5c8;border-radius:6px;background:#fff}
+.search-label input{font:inherit;padding:4px 8px;border:1px solid #ddd5c8;border-radius:6px;background:#fff}
 .search-label input{width:240px}
 .kind-filters{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
 .tag-label{font-weight:700;font-size:13px;color:#626a75}
